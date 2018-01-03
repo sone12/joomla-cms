@@ -485,7 +485,7 @@ class FileStorage extends CacheStorage
 		{
 			// Make sure the index file is there
 			$indexFile = $dir . '/index.html';
-			@mkdir($dir) && file_put_contents($indexFile, '<!DOCTYPE html><title></title>');
+			@mkdir($dir,0751) && file_put_contents($indexFile, '<!DOCTYPE html><title></title>');
 		}
 
 		// Make sure the folder exists
